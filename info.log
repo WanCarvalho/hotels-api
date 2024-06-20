@@ -21,3 +21,7 @@
 {"label":"hotels api","level":"info","message":"GET /hotels","timestamp":"2024-06-20T11:22:04.046Z"}
 {"label":"hotels api","level":"info","message":"GET /hotels/:id","timestamp":"2024-06-20T11:22:18.020Z"}
 {"label":"hotels api","level":"info","message":"GET /hotels/:id","timestamp":"2024-06-20T11:22:19.358Z"}
+{"label":"hotels api","level":"info","message":"GET /hotels","timestamp":"2024-06-20T11:34:06.297Z"}
+{"label":"hotels api","level":"info","message":"GET /hotels/:id","timestamp":"2024-06-20T11:34:37.856Z"}
+{"label":"hotels api","level":"info","message":"GET /hotels/:id","timestamp":"2024-06-20T11:34:51.344Z"}
+{"label":"hotels api","level":"info","message":"GET /hotels/:id","timestamp":"2024-06-20T11:37:07.425Z"}

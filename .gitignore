@@ -1,5 +1,5 @@
 node_modules
 .vscode
 .env
-.log
-.log
+error.log
+info.log
