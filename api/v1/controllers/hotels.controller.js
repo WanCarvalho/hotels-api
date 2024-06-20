@@ -3,7 +3,7 @@ import { validationResult } from "express-validator";
 
 async function getHotels(req, res, next) {
     try {
-        const results = await HotelsService.getHotels();
+        const results = await HotelsService.getHotels(req.pagination);
         res.status(200);
         res.send(results);
 
