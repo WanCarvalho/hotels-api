@@ -1,9 +1,12 @@
 import HotelsService from "../services/hotels.services.js";
 import { validationResult } from "express-validator";
+import { cache } from "../../middlewares/cache.js";
 
 async function getHotels(req, res, next) {
     try {
         const results = await HotelsService.getHotels(req.pagination);
+        cache.set(`getHotels - ${JSON.stringify(req.pagination)}`, results);
+
         res.status(200);
         res.send(results);
 
