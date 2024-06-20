@@ -20,6 +20,10 @@ app.use("/api/v2", RouterV2);
 
 // middleware para tratamento de erros precisa ser colocado como último da cadeia de requisições
 app.use((err, req, res, next) => {
+    logger.error(
+        `${err.statusCode} - ${err.message} - ${req.method} ${req.baseUrl}`
+    );
+    
     res
         .status(err.statusCode || 500)
         .send({ error: err.message || "Something went wrong" });

@@ -6,6 +6,8 @@ async function getHotels(req, res, next) {
         const results = await HotelsService.getHotels();
         res.status(200);
         res.send(results);
+
+        logger.info("GET /hotels");
     } catch (err) {
         next(err);
     }
@@ -16,6 +18,8 @@ async function getHotel(req, res, next) {
         const hotel = await HotelsService.getHotel(req.params.id);
         res.status(200);
         res.send(hotel);
+
+        logger.info("GET /hotels/:id");
     } catch (err) {
         next(err);
     }
@@ -40,6 +44,8 @@ async function createHotel(req, res, next) {
 
         hotel = await HotelsService.createHotel(hotel);
         res.status(201).send(hotel);
+
+        logger.info(`POST /hotels/ - ${JSON.stringify(hotel)}`);
     } catch (err) {
         next(err);
     }
@@ -49,6 +55,8 @@ async function deleteHotel(req, res, next) {
     try {
         await HotelsService.deleteHotel(req.params.id);
         res.status(204).end();
+
+        logger.info("DELETE /hotels/:id");
     } catch (err) {
         next(err);
     }
@@ -74,6 +82,8 @@ async function updateHotel(req, res, next) {
 
         hotel = await HotelsService.updateHotel(hotel);
         res.status(204).send(hotel);
+
+        logger.info(`POST /hotels/ - ${JSON.stringify(hotel)}`);
     } catch (err) {
         throw err;
     }
