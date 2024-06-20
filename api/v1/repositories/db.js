@@ -8,8 +8,8 @@ const sequelize = new Sequelize(
         
     dialect: 'postgres',
     define: {
-        timestamp: false
-    }
+        timestamps: false
+    },
 });
 
 export default sequelize;
